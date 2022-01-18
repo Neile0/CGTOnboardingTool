@@ -1,0 +1,48 @@
+﻿<Window x:Class="CGTOnboardingTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CGTOnboardingTool"
+        mc:Ignorable="d"
+        Title="CGT Onboarding Tool" Height="720" Width="1280">
+
+    <Canvas>
+        <Canvas.Background>
+            <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                <GradientStop Color="#596573" Offset="0"/>
+                <GradientStop Color="#36414C" Offset="1"/>
+            </LinearGradientBrush>
+        </Canvas.Background>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="256"/>
+                <ColumnDefinition Width="1024"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label Content="CGT Onboarding Tool" Foreground="#00CDF9" Height="50" FontSize="25"/>
+                <Button x:Name="btnBuild" Content="Build" Click="btnBuild_Click" Height="50" FontSize="35" BorderBrush="{x:Null}" Foreground="#00CDF9">
+                    <Button.Background>
+                        <SolidColorBrush Opacity="0"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnReduce" Content="Reduce" Click="btnReduce_Click" Height="50" FontSize="35" BorderBrush="{x:Null}" Foreground="#00CDF9">
+                    <Button.Background>
+                        <SolidColorBrush Opacity="0"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnRebuild" Content="Rebuild" Click="btnRebuild_Click" Height="50" FontSize="35" BorderBrush="{x:Null}" Foreground="#00CDF9">
+                    <Button.Background>
+                        <SolidColorBrush Opacity="0"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <Frame x:Name="mainFrame" Content="Frame" NavigationUIVisibility="Hidden" Grid.Column="1" Margin="0,0,0,-528"/>
+
+        </Grid>
+        <Border BorderBrush="#36414C" BorderThickness="1" Height="704" Canvas.Left="254" Width="1"/>
+
+    </Canvas>
+</Window>
+    
